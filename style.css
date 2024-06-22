@@ -1,0 +1,1157 @@
+/* font downloaded form google fonts */
+/* font name : inter */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* universal css */
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+
+/* body css */
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+/* some utility classes */
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-s{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.col{
+    color: chartreuse;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+/* header css starts */
+
+header{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3)),url("images/main.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* navbar css starts */
+
+nav{
+    width: 100%;
+    height: 12vh;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+/* sidebar section css starts here */
+
+.side-bar-div{
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    z-index: 999;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:flex-start;
+}
+
+.sidebar li{
+    width: 100%;
+    text-align: center;
+    margin: 30px;
+}
+
+.sidebar  a{
+    width: 100%;
+}
+
+.bar{
+    display: none;
+    opacity: 0%;
+}
+
+.fa-bars{
+    font-size: 40px;
+    color: chartreuse;
+}
+
+.fa-xmark{
+    float: right;
+    margin-right: 40px;
+    margin-top: 0%;
+    font-size: 40px;
+    color: chartreuse;
+}
+
+/* sidebar section css ends here */
+
+.logo img{
+    height: 70px;
+    background-color:#fff;
+    padding: 7px;
+    border-radius: 50%;
+}
+
+.logo h2{
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.nav-contents ul{
+    display: flex;
+    align-items: center;
+    justify-content: center
+ }
+ .nav-contents a{
+    margin: 0 30px;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 8px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.nav-contents a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-bottom: 3px solid chartreuse;
+    transition: 0.3s linear;
+}
+
+.nav-contents a:hover > a:not(:hover){
+    background: none;
+}
+
+.nav-contents a:is(:hover,:active)::before{
+    width: 90%;
+}
+
+.nav-btn button{
+    height: 50px;
+    width: 120px;
+    margin: 0 18px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    background-color: chartreuse;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 25px;
+    padding: 3px 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-btn button:hover{
+    border:3px solid chartreuse;
+    background-color: #fff;
+    color: chartreuse;
+}
+
+/* navbar css ends */
+
+/* home css starts */
+
+.home{
+    height: 85vh;
+    width: 100%;
+    flex-direction: column;
+    text-transform: capitalize;
+}
+
+h1{
+    font-size: 70px;
+    letter-spacing: 3px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.home h1 span {
+    padding-left: 15px;
+
+}
+
+.home h2{
+    font-size: 50px;
+    color: #fff;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+
+.btns{
+    margin-top: 50px;
+}
+
+.btns button{
+    height: 60px;
+    margin: 0px 20px;
+    width: 120px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    background-color: chartreuse;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    border: none;
+    border-radius: 30px;
+    padding: 12px;
+}
+
+/* home css ends here */
+
+/* hill station section starts here */
+
+.section-1{
+    background-image: url("images/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: chartreuse;
+    width: 100%;
+    height: 100vh;
+}
+
+.section-1 h2{
+    font-size: 60px;
+    text-align: center;
+    color: chartreuse;
+    cursor: pointer;
+    padding: 30px;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+    backdrop-filter: blur(20px);
+}
+
+.section-1 h2:hover{
+    background-color: chartreuse;
+    color: black;
+    border-radius: 60px;
+}
+
+.parent-div{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 23%;
+    gap: 80px;
+    overflow-x: auto;
+    margin-top: 70px;
+    overscroll-behavior-inline: contain ;
+}
+
+.card{
+    height:450px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 25px;
+    width: 370px;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-left: 16px;
+    backdrop-filter: blur(20px);
+    background-color: transparent;
+    color: chartreuse;
+    border: 3px solid chartreuse;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover{
+    background-color: chartreuse;
+    color: black;
+    border: 3px solid black;
+}
+
+.card > img{
+    inline-size: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit:cover ;
+    border-radius: 12px;
+    border: 2px solid chartreuse;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover > img{
+    border: 2px solid #000;
+}
+
+.card > h3{
+    text-transform: capitalize;
+}
+
+.card > p{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.card > button{
+    background-color: chartreuse;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    border: 3px solid #000;
+    border-radius: 20px;
+    width: 90%;
+    height: 40px;
+}
+/* hill station section ends here */
+
+/* offer section css starts here */
+
+.section-2{
+    background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3)),url("images/offer\ bg.jpg") ;
+    height: 100vh;
+    width: 100%;
+}
+
+.section-2 > h3{
+    font-size: 60px;
+    text-align: center;
+    color: chartreuse;
+    cursor: pointer;
+    padding: 30px;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+    backdrop-filter: blur(20px);
+}
+
+.section-2 > h3:hover{
+    background-color: chartreuse;
+    color: black;
+    border-radius: 60px;
+}
+
+.section-2 img{
+    filter: drop-shadow(0 0 20px chartreuse);
+    margin-top: 50px;
+}
+
+section .flex{
+    justify-content: space-evenly;
+}
+
+/* offer division starts here */
+
+.offers{
+    height: 500px;
+    width: 250px;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    text-align: center;
+}
+
+.offers h2{
+    text-transform: capitalize;
+    margin: 15px;
+}
+
+.offers button{
+    background-color: #fff;
+    border: none;
+    padding: 15px;
+    margin: 15px;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+}
+
+li b{
+    text-transform: capitalize;
+    margin-right: 5px;
+}
+
+ul li{
+    list-style-type: none;
+    margin-top: 15px;
+}
+
+/* first offer card css starts here */
+
+.offer-1{
+    background-color: blueviolet;
+    color: #fff;
+}
+
+.offer-1 button{
+    border: 2px solid blueviolet;
+    background-color: white;
+    color: blueviolet;
+    margin-top: 50px;
+}
+
+.offer-1 button:hover{
+    background-color: blueviolet;
+    color:white;
+    border: 2px solid white;
+}
+
+.fa-user-tie{
+    background-color: #fff;
+    color: blueviolet;
+    padding: 15px 18px;
+    font-size: 40px;
+    border-radius: 50%;
+}
+
+/* first offer card css ends here */
+
+/* second offer css starts here */
+
+.offer-2{
+    background-color: coral;
+    color: #fff;
+}
+
+.offer-2 button{
+    color: coral;
+}
+
+.offer-2 button:hover{
+    background-color: coral;
+    color: #fff;
+    border: 2px solid white;
+}
+
+.fa-sack-dollar{
+    background-color: #fff;
+    color: coral;
+    padding: 15px;
+    font-size: 40px;
+    border-radius: 50%;
+}
+
+/* second offer css ends here */
+
+/* third offer css starts here */
+
+.offer-3{
+    background-color: crimson;
+    color: #fff;
+}
+
+.fa-crown{
+    background-color: #fff;
+    color: crimson;
+    padding: 15px;
+    font-size: 40px;
+    border-radius: 50%;
+}
+
+.offer-3 button{
+    margin-top: 35px;
+    color: crimson;
+}
+
+.offer-3 button:hover{
+    border: 2px solid white;
+    background-color: crimson;
+    color: #fff;
+}
+
+/* third offer css ends here */
+/* offer division ends here */
+
+/* image sliding section starts here */
+
+.section-3{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-3 > h2{
+    font-size: 60px;
+    text-align: center;
+    color: chartreuse;
+    cursor: pointer;
+    padding: 30px;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+    backdrop-filter: blur(20px);
+}
+
+.section-3 > h2:hover{
+    background-color: chartreuse;
+    color: black;
+    border-radius: 60px;
+}
+
+.section-3 .wrapper{
+    width: 80vw;
+    height: 70vh;
+    box-shadow: 0px 0px 30px 12px #fff;
+    margin: 2rem auto;
+    overflow: hidden;
+}
+
+.section-3 .wrapper-holder{
+    display: grid;
+    grid-template-columns: repeat(4,100%);
+    height: 100%;
+    width: 100%;
+    animation: slider 30s ease-in-out infinite alternate;
+}
+
+.section-3 #slider-img-1{
+    background-image: url("images/place-img-1.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+}
+.section-3 #slider-img-2{
+    background-image: url("images/place-img-2.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+}
+.section-3 #slider-img-3{
+    background-image: url("images/place-img-3.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+}
+.section-3 #slider-img-4{
+    background-image: url("images/place-img-4.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.section-3 .button-holder .button{
+    background-color: chartreuse;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 1rem;
+}
+
+.section-3 .button-holder{
+    position: absolute;
+    bottom: 8%;
+    left: 45%;
+}
+
+/* animation for sliding images */
+
+@keyframes slider{
+    0%{transform: translateX(0%);}
+    10%{transform: translateX(-100%);}
+    20%{transform: translateX(-100%);}
+    30%{transform: translateX(-200%);}
+    40%{transform: translateX(-200%);}
+    50%{transform: translateX(-200%);}
+    60%{transform: translateX(-300%);}
+    70%{transform: translateX(-300%);}
+    80%{transform: translateX(-300%);}
+    90%{transform: translateX(0%);}
+    100%{transform: translateX(0%);}
+}
+/* image sliding section ends here */
+
+/* contact section  css starts here  */
+
+footer{
+    height: 80vh;
+    width: 100%;
+    background-color: #000;
+    color: chartreuse;
+}
+
+footer h2 {
+    font-size: 60px;
+    text-align: center;
+    color: chartreuse;
+    cursor: pointer;
+    padding: 30px;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+    backdrop-filter: blur(20px);
+}
+
+footer h2:hover{
+    background-color: chartreuse;
+    color: black;
+    border-radius: 60px;
+}
+
+.div-1{
+    margin-top: 30px;
+    width: 60%;
+}
+
+.div-1 h4{
+    font-size: 20px;
+}
+
+/* form tag full css starts here */
+
+form {
+    flex-direction: column;
+    margin-top: 20px;
+}
+.fa-user{
+    font-size: 22px;
+    padding: 8px;
+    background-color: chartreuse;
+    color: #000;
+}
+
+.fa-envelope{
+    font-size: 22px;
+    padding: 8px;
+    background-color: chartreuse;
+    color: #000;
+}
+
+input[type="text"]{
+    text-transform: capitalize;
+}
+
+input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid chartreuse;
+    width: 270px;
+    height: 40px;
+    margin: 10px 0px;
+    color: chartreuse;
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+    padding-left: 7px;
+}
+
+::placeholder{
+    color: chartreuse;
+    font-size: 15px;
+    background-color: transparent;
+    text-transform: capitalize;
+}
+
+textarea{
+    background-color: transparent;
+    border: 3px solid chartreuse;
+    height: 100px;
+    width: 320px;
+    margin: 10px;
+    outline: none;
+    color: chartreuse;
+    padding-left: 7px;
+    padding-top: 7px;
+}
+
+form button{
+    background-color: chartreuse;
+    height: 50px;
+    padding: 12px 15px;
+    margin-top: 10px;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    border-radius: 30px;
+}
+
+/* form tag full css ends here */
+
+.div-2{
+    flex-direction: column;
+    width: 40%;
+}
+
+.div-2 h3{
+    text-transform: capitalize;
+    margin: 20px;
+    font-size: 30px;
+}
+
+.div-2 a{
+    margin: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+    padding: 4px;
+}
+
+.div-2 a:hover{
+    border-bottom: 2px solid chartreuse;
+    color: chartreuse;
+}
+
+/* contact section css ends here */
+
+/* media query for max width 1320px */
+
+@media screen and (max-width:1320px) {
+    .nav-btn button{
+        height: 45px;
+        width: 100px;
+    }
+    .logo img{
+        height: 65px;
+    }
+    .parent-div{
+        grid-auto-columns: 24%;
+    }
+    .section-2 img{
+        height: 450px;
+    }
+    .offers{
+        width: 270px;
+    }
+    .offer-1 button{
+        margin-top: 75px;
+    }
+    .offer-2 button{
+        margin-top: 40px;
+    }
+}
+
+/* media query for max width 1280px */
+
+@media screen and (max-width:1280px){
+
+    /* nav section media query at 1280px */
+	.nav-contents a{
+		font-size:15px;
+		margin:0px 15px;
+		}
+	.nav-btn button{
+		margin:0px 15px;
+		font-size:15px;
+		padding:2px 6px;
+		}
+    .logo img{
+        height: 60px;
+    }
+    .logo h2{
+        font-size: 22px;
+    }
+
+        /* about section media query at 1280px */
+	h1{
+		font-size:60px;
+		letter-spacing:2px;
+		}
+	.home h2{
+		font-size:40px;
+		}
+
+        /* card section media query at 1280px */
+	.card{
+        height: 420px;
+        padding: 15px;
+        width: 350px;
+        
+    }
+    .card img{
+        height: 200px;
+        width: 270px;
+        object-fit: cover;
+    }
+    .card p{
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    /* offer section media query at 1280px */
+    .section-2 img {
+        height: 400px;
+    }
+
+    /* sliding section media query at 1280px */
+    .section-3 .wrapper{
+        width: 90vw;
+        height: 75vh;
+    }
+}
+
+/* media query for max width 1190px */
+
+@media screen and (max-width:1190px) {
+    .offers{
+        width: 250px;
+    }
+    h1{
+        font-size: 50px;
+    }
+    .home h2{
+        font-size: 30px;
+    }
+    .logo h2{
+        font-size: 20px;
+    }
+    .logo img{
+        height: 50px;
+    }
+    .section-2 img{
+        height: 380px;
+    }
+    .offer-1 button{
+        margin-top: 55px;
+    }
+    .offer-2 button{
+        margin-top: 20px;
+    }
+    .card{
+        width: 300px;
+    }
+    .parent-div{
+        grid-auto-columns:21% ;
+    }
+}
+
+/* media query for max width 1150px */
+
+@media screen and (max-width:1150px) {
+    .parent-div{
+        grid-auto-columns: 24%;
+    }
+    .section-2 img{
+        height: 350px;
+    }
+    .offers h2{
+        margin: 12px;
+        font-size: 20px;
+    }
+    .offers button{
+        width: 90%;
+    }
+    .section-2  img{
+        height: 320px;
+    }
+    .section-2 .offers{
+        margin-top: 80px;
+    }
+}
+
+/* media query for max width 1100px */
+
+@media screen and (max-width:1100px) {
+    .section-2 img{
+        display: none;
+    }
+    .offers{
+        width: 300px;
+        padding: 30px;
+    }
+    .offers h2{
+        font-size: 30px;
+    }
+    .offers button{
+        width: 100%;
+    }
+}
+
+/* media query for max width 1020px */
+
+@media screen and (max-width:1020px) {
+    .nav-btn button{
+		margin:0px 12px;
+		font-size:15px;
+		padding:2px 6px;height: 40px;
+        width: 100px;
+	}
+    footer{
+        height: 60vh;
+    }
+    
+}
+
+/* media query for max width 1000px */
+
+@media screen and (max-width:1000px) {
+    .nav-btn button{
+        margin: 0px 10px;
+        font-size: 14px;
+    }
+    .logo h2{
+        font-size: 15px;
+    }
+    .logo img{
+        height: 40px;
+    }
+    .nav-contents a{
+        font-size: 13px;
+    }
+}
+
+/* media query for max width 950px */
+
+@media screen and (max-width:950px) {
+    .parent-div{
+        grid-auto-columns:28% ;
+    }
+} 
+
+/* media query for max width 920px */
+
+
+@media screen and (max-width:920px) {
+    h1{
+        font-size: 45px;
+    }
+    .offers{
+        width: 270px;
+        padding: 10px;
+    }
+    .offers button{
+        width: 90%;
+    }
+    .div-1 h4{
+        font-size: 18px;
+    }
+    .div-2 h3{
+        font-size: 20px;
+    }
+}
+
+/* media query foe max width 900px */
+
+@media screen and (max-width:900px) {
+    .logo h2{
+        font-size: 30px;
+    }
+    .logo img{
+        height: 60px;
+    }
+    .bar{
+        display: block;
+        opacity: 100%;
+    }
+    .none{
+        display: none;
+    }
+    .nav-btn button{
+        height: 55px;
+        width: 140px;
+        font-size: 20px;
+        margin: 0 30px;
+        border-radius: 40px;
+    }
+    .sidebar{
+        width: 350px;
+    }
+    .sidebar li a{
+        font-size: 20px;
+    }
+}
+ 
+
+@media screen and (max-width:840px){
+    .fa-bars{
+        margin-right: 40px;
+    }
+    .section-2{
+        height: 135vh;
+    }
+    .offers{
+        flex-direction: row;
+        width: 70%;
+        height: 250px;
+        margin: -60px;
+    }
+    .offer-div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction:column;
+        margin-top: -40px;
+    }
+    .off-div-1{
+        width: 30%;
+    }
+    .off-div-2{
+        width: 70%;
+    }
+    .offers li{
+        font-size: 14px;
+    }
+    h1{
+        flex-direction: column;
+        font-size: 70px;
+        letter-spacing: 0px;
+    }
+    .parent-div{
+        grid-auto-columns: 34%;
+    }
+} 
+
+@media screen and (max-width:780px) {
+    .nav-btn button{
+        margin: 0 15px;
+    }
+    .div-2 a{
+        font-size: 15px;
+    }
+    .btns button{
+        margin-top: 70px;
+    }
+    .home h2{
+        margin-top: 50px;
+    }
+    .div-1 h4{
+        font-size: 15px;
+        text-align: center;
+        margin-left: 10px;
+    }
+} 
+
+@media screen and (max-width:720px) {
+    .nav-btn button{
+        padding: 0px 8px; 
+        height: 50px;
+        width: 120px;
+        font-size: 15px;
+        margin: 0px 10px;
+    }
+    .section-1 h2{
+        font-size: 50px;
+        padding: 20px;
+    }
+    .section-2 h3{
+        font-size: 50px;
+        padding: 20px;
+    }
+    .section-3{
+        height: 80vh;
+    }
+    .section-3 h2{
+        font-size: 50px;
+        padding: 20px;
+    }
+    footer h2{
+        font-size: 50px;
+        padding: 20px;
+    }
+    footer{
+        height: 70vh;
+    }
+    .section-3 .wrapper{
+        height: 50vh;
+    }
+} 
+
+@media screen and (max-width:675px) {
+    .offers{
+        width: 80%;
+    }
+    .off-div-1{
+        margin-left: 10px;
+    }
+    .section-3 .wrapper {
+        height: 50vh;
+    }
+    .section-3 .button-holder{
+        bottom: 30%;
+        left: 35%;
+    }
+    .nav-btn button{
+        margin: 0px 8px;
+    }
+    .logo h2{
+        font-size: 20px;
+    }
+    .logo img{
+        height: 50px;
+    }
+    .parent-div{
+        grid-auto-columns: 37%;
+    }
+    h1{
+        font-size: 60px;
+    }
+    .section-2{
+        height: 125vh;
+    }
+} 
+@media screen and (max-width:600px) {
+    .parent-div{
+        grid-auto-columns: 40%;
+    }
+    .off-div-1{
+        margin-right: 30px;
+    }
+    .offers button{
+        margin: 10px;
+    }
+    .offer-1 button{
+        margin-top: 40px;
+    }
+} 
+@media screen and (max-width:570px) {
+    .section-3 .button-holder{
+        bottom: 20%;
+    }
+    .parent-div{
+        grid-auto-columns: 45%;
+    }
+    .nav-btn button{
+        height: 40px;
+        width: 100px;
+    }
+    .fa-envelope{
+        font-size: 18px;
+        padding: 6px;
+    }
+    .fa-user{
+        font-size: 18px;
+        padding: 6px;
+    }
+    input{
+        width: 250px;
+    }
+    textarea{
+        width: 290px;
+    }
+    form button{
+        font-size: 15px;
+    }
+    .offers li{
+        font-size: 12px;
+    }
+} 
